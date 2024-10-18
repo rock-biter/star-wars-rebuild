@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div id="app">
+			<div id="ambiente">
+				<!--<div id="x_wing">
+    	<div id="x_wing_immagine"></div>
+        <div id="armamenti">
+            <div class="laser sx-top-animation" id="sx-top"></div>
+            <div class="laser dx-top-animation" id="dx-top"></div>
+            <div class="laser dx-bottom-animation" id="dx-bottom"></div>
+            <div class="laser sx-bottom-animation" id="sx-bottom"></div>
+        </div>
+    </div>-->
+				<div id="cielo-centro"></div>
+
+				<div id="spazio_3d">
+					<div id="score">
+						<h2 class="punti"></h2>
+						<h3>pts</h3>
+					</div>
+
+					<svg
+						class="life"
+						viewBox="0 0 100 100"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle
+							cx="50"
+							cy="50"
+							r="30"
+							stroke-width="10"
+							stroke="currentColor"
+							fill="transparent"
+							stroke-dasharray="189 200"
+						/>
+					</svg>
+
+					<div id="stelle">
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+						<div class="stella"></div>
+					</div>
+
+					<!-- x-wing tridimensionale -->
+					<div id="x-wing-traslazione" class="player">
+						<div id="x-wing-rotazione" class="x-wing-3d">
+							<div id="carena_fondo"></div>
+							<!-- carena superiore -->
+							<div id="carena_top_1"></div>
+							<div id="carena_top_2"></div>
+							<!-- carena finachi -->
+							<div id="fianco-destro-sup"></div>
+							<div id="fianco-sinistro-sup"></div>
+							<div id="fianco-destro-inf"></div>
+							<div id="fianco-sinistro-inf"></div>
+							<!-- carena inferiore -->
+
+							<!-- ALI SUPERIORI-->
+							<!-- destra superiore-->
+							<div class="wing-superiore wing-destra-sup">
+								<div class="reattore-retro">
+									<div class="fiamme-fronte"></div>
+									<div class="fiamme-lato"></div>
+									<div class="fiamme-lato fuoco-perp"></div>
+								</div>
+								<div class="cannone"></div>
+								<div class="cannone perp"></div>
+							</div>
+							<!-- sinistra superiore-->
+							<div class="wing-superiore wing-sinistra-sup">
+								<div class="reattore-retro">
+									<div class="fiamme-fronte"></div>
+									<div class="fiamme-lato"></div>
+									<div class="fiamme-lato fuoco-perp"></div>
+								</div>
+								<div class="cannone"></div>
+								<div class="cannone perp"></div>
+							</div>
+
+							<!-- ALI INFERIORI-->
+							<!-- destra inferiore-->
+							<div class="wing-inferiore wing-destra-inf">
+								<div class="reattore-retro">
+									<div class="fiamme-fronte"></div>
+									<div class="fiamme-lato"></div>
+									<div class="fiamme-lato fuoco-perp"></div>
+								</div>
+								<div class="cannone"></div>
+								<div class="cannone perp"></div>
+							</div>
+							<!-- sinistra inferiore-->
+							<div class="wing-inferiore wing-sinistra-inf">
+								<div class="reattore-retro">
+									<div class="fiamme-fronte"></div>
+									<div class="fiamme-lato"></div>
+									<div class="fiamme-lato fuoco-perp"></div>
+								</div>
+								<div class="cannone"></div>
+								<div class="cannone perp"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- caccia imperiali tridimensionali -->
+					<!--caccia 1-->
+					<div class="enemy">
+						<div class="caccia_3d">
+							<div class="oblo"></div>
+							<div class="ala ala-destra"></div>
+							<div class="ala ala-sinistra"></div>
+							<div class="giunti giunti_fronte"></div>
+							<div class="ghiera ghiera_destra">
+								<div class="denti_ghiera"></div>
+							</div>
+							<div class="ghiera ghiera_sinistra">
+								<div class="denti_ghiera"></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="incrociatore"></div>
+				</div>
+
+				<div id="" class="caccia_traslazione_4">
+					<div id="" class="caccia_3d enemy caccia_rotazione_4">
+						<div class="oblo"></div>
+						<div class="retro-0"></div>
+						<div class="retro-1"></div>
+						<div class="retro-2"></div>
+						<div class="ala ala-destra"></div>
+						<div class="ala ala-sinistra"></div>
+						<div class="giunti giunti_fronte"></div>
+						<!--<div class="giunti giunti_retro">
+                </div>-->
+						<div class="ghiera ghiera_destra">
+							<div class="denti_ghiera"></div>
+						</div>
+						<div class="ghiera ghiera_sinistra">
+							<div class="denti_ghiera"></div>
+						</div>
+					</div>
+					<div id="descrizione">
+						<h3>TIE fighters</h3>
+						<p><span>Fazione:</span> Primo Ordine</p>
+						<p><span>Classe Velocità:</span> Molto Veloce</p>
+						<p><span>Potenza di Fuoco:</span> Bassa</p>
+						<p><span>Armamenti:</span> Cannoni Frontali n° 2</p>
+						<p><span>Iperspazio:</span> Si</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
