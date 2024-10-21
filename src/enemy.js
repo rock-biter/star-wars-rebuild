@@ -9,8 +9,8 @@ export default class Enemy {
 	domElement = domElement.cloneNode(true)
 	space = SPACE_3D
 	spinSpeed = Math.random() - 0.5
-	speed = 5000
-	z = -10000
+	speed = 7000
+	z = -20000
 	sizes = {
 		x: 150,
 		y: 150,

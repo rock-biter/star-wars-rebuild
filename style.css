@@ -3179,53 +3179,26 @@ audio {
 }
 
 #incrociatore {
-	width: 200px;
-	height: 200px;
-	top: 40%;
-	left: 30%;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
 	position: absolute;
-	background-image: url(../img/incrociatore.png);
-	background-size: contain;
+	background-image: url(../img/star-destroyer.webp);
+	background-size: 40vw auto;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 50% 50%;
+	transform-origin: center 60%;
 	z-index: 0;
-
-	-webkit-animation: incrociatore 120s linear infinite alternate;
-	-moz-animation: incrociatore 120s linear infinite alternate;
-	-ms-animation: incrociatore 120s linear infinite alternate;
-	-o-animation: incrociatore 120s linear infinite alternate;
-	animation: incrociatore 120s linear infinite alternate;
-}
-
-@-webkit-keyframes incrociatore {
-	0% {
-	}
-	100% {
-		transform: scale(1.5);
-	}
-}
-
-@-moz-keyframes incrociatore {
-	0% {
-	}
-	100% {
-		transform: scale(1.5);
-	}
-}
-
-@-o-keyframes incrociatore {
-	0% {
-	}
-	100% {
-		transform: scale(1.5);
-	}
+	animation: incrociatore 60s linear forwards;
+	filter: contrast(1.15) brightness(0.7);
 }
 
 @keyframes incrociatore {
 	0% {
 	}
 	100% {
-		transform: scale(1.5);
+		transform: scale(2);
 	}
 }
 
