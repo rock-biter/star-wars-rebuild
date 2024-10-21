@@ -23,4 +23,25 @@ export default class Laser {
 			this.domElement.remove()
 		}, 1000)
 	}
+
+	getEdges() {
+		return [
+			{
+				x: this.x + 165,
+				y: this.y - 85,
+			},
+			{
+				x: this.x - 165,
+				y: this.y - 85,
+			},
+			{
+				x: this.x + 165,
+				y: this.y + 85,
+			},
+			{
+				x: this.x - 165,
+				y: this.y + 85,
+			},
+		]
+	}
 }

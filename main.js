@@ -4,9 +4,21 @@ import './style.css'
 
 const enemies = []
 const player = new Player(enemies)
+let tabFocus = true
+
+document.addEventListener('visibilitychange', (event) => {
+	console.log(event)
+	console.log('document is hidden', document.hidden)
+
+	if (document.hidden) {
+		tabFocus = false
+	} else {
+		tabFocus = true
+	}
+})
 
 const timer = setInterval(() => {
-	new Enemy(enemies, player)
+	tabFocus && new Enemy(enemies, player)
 }, 500)
 
 // for (let i = 0; i < 10; i++) {
@@ -18,7 +30,7 @@ let time = 0
 
 function tic(t) {
 	// console.log(time)
-	const dt = (t - time) / 1000
+	const dt = Math.min((t - time) / 1000, 0.02)
 	time = t
 
 	// console.log(dt)

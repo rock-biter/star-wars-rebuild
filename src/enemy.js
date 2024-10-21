@@ -8,11 +8,12 @@ const SPACE_3D = document.getElementById('spazio_3d')
 export default class Enemy {
 	domElement = domElement.cloneNode(true)
 	space = SPACE_3D
+	spinSpeed = Math.random() - 0.5
 	speed = 5000
 	z = -10000
 	sizes = {
-		x: 200,
-		y: 200,
+		x: 150,
+		y: 150,
 	}
 
 	constructor(enemies, player) {
@@ -23,8 +24,8 @@ export default class Enemy {
 	}
 
 	init() {
-		this.x = (Math.random() - 0.5) * window.innerWidth * 0.3
-		this.y = (Math.random() - 0.5) * window.innerHeight * 0.3
+		this.x = (Math.random() - 0.5) * window.innerWidth * 0.4
+		this.y = (Math.random() - 0.5) * window.innerHeight * 0.4
 
 		gsap.set(this.domElement, { x: this.x, y: this.y, z: this.z })
 
@@ -48,7 +49,14 @@ export default class Enemy {
 
 	update(dt) {
 		this.z += dt * this.speed
-		gsap.set(this.domElement, { z: this.z })
+		gsap.set(this.domElement, {
+			z: this.z,
+			rotate: `+=${dt * 100 * this.spinSpeed}`,
+		})
+
+		if (this.z >= 0) {
+			gsap.set(this.domElement, { zIndex: 200 })
+		}
 
 		if (this.z > 1000) {
 			// console.log('elima t-fighter')
